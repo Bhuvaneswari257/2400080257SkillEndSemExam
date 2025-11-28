@@ -1,0 +1,172 @@
+/* ================= RESET ================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ================= PAGE BACKGROUND ================= */
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
+  background: radial-gradient(circle at top left, #dbeafe, #eff6ff);
+  color: #0f172a;
+}
+
+/* ================= CENTER CONTAINER ================= */
+.app {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;          /* vertical center */
+  justify-content: center;      /* horizontal center */
+  padding: 40px;
+}
+
+/* ================= MAIN CARD ================= */
+.card {
+  width: 520px;                 /* spread */
+  max-width: 95%;
+  background: #ffffff;
+  border-radius: 32px;
+  box-shadow: 0 30px 80px rgba(15, 23, 42, 0.2);
+  padding: 36px 36px 28px;
+}
+
+/* ================= HEADER ================= */
+.header {
+  margin-bottom: 22px;
+}
+
+.title {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+.subtitle {
+  font-size: 14px;
+  color: #64748b;
+}
+
+/* ================= SEARCH BAR ================= */
+.search-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.search-input {
+  flex: 1;
+  border-radius: 999px;
+  border: 1px solid #e2e8f0;
+  padding: 14px 18px;
+  font-size: 14px;
+  outline: none;
+  background: #f8fafc;
+  transition: 0.2s ease;
+}
+
+.search-input::placeholder {
+  color: #94a3b8;
+}
+
+.search-input:focus {
+  border-color: #60a5fa;
+  background: #ffffff;
+  box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.3);
+}
+
+/* ================= RESULT COUNT ================= */
+.result-count {
+  font-size: 12px;
+  padding: 9px 16px;
+  border-radius: 999px;
+  background: #e0edff;
+  color: #2563eb;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+/* ================= STUDENT LIST ================= */
+.list {
+  max-height: 420px;
+  overflow-y: auto;
+  padding-right: 6px;
+}
+
+/* scrollbar */
+.list::-webkit-scrollbar {
+  width: 5px;
+}
+
+.list::-webkit-scrollbar-thumb {
+  background: #a5b4fc;
+  border-radius: 10px;
+}
+
+/* ================= STUDENT ITEM ================= */
+.student-row {
+  padding: 14px 10px;
+  border-radius: 16px;
+  margin-bottom: 12px;
+  cursor: default;
+  transition: background 0.15s ease, transform 0.1s ease;
+}
+
+.student-row:hover {
+  background: #f8fafc;
+  transform: translateY(-1px);
+}
+
+.student-main {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.student-name {
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.student-roll {
+  font-size: 12px;
+  padding: 5px 14px;
+  border-radius: 999px;
+  background: #e0edff;
+  color: #2563eb;
+}
+
+.student-meta {
+  font-size: 13px;
+  color: #64748b;
+  margin-top: 6px;
+}
+
+/* ================= EMPTY STATE ================= */
+.empty-state {
+  text-align: center;
+  padding: 32px;
+  color: #94a3b8;
+}
+
+/* ================= MOBILE ================= */
+@media (max-width: 480px) {
+  .card {
+    padding: 26px 22px;
+  }
+
+  .title {
+    font-size: 22px;
+  }
+
+  .search-wrapper {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .result-count {
+    align-self: flex-end;
+  }
+}
